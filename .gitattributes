@@ -1,7 +1,12 @@
 *.jpg diff=jpg
 *.jpeg diff=jpg
+*.png diff=exif
+*.gif diff=exif
+	
 *.docx diff=pandoc2md
 *.pdf diff=pdfconv
 
 *.py filter=cleanpython
-*.java filter=secret
+*.java filter=secret diff=secret
+*.py diff=color
+*.md diff=wrap
