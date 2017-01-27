@@ -1,1 +1,7 @@
+*.jpg diff=jpg
+*.jpeg diff=jpg
 *.docx diff=pandoc2md
+*.pdf diff=pdfconv
+
+*.py filter=cleanpython
+*.java filter=secret
