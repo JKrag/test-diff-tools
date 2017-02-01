@@ -5,8 +5,10 @@
 	
 *.docx diff=pandoc2md
 *.pdf diff=pdfconv
+*.py diff=color
+*.md diff=wrap
 
 *.py filter=cleanpython
 *.java filter=secret diff=secret
-*.py diff=color
-*.md diff=wrap
+
+*.mp3 diff=mp3
