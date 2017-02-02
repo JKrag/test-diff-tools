@@ -7,8 +7,11 @@
 *.pdf diff=pdfconv
 *.py diff=color
 *.md diff=wrap
+*.mp3 diff=mp3
+
+*.zip diff=ziplist
+*.mdzip diff=zipshow
 
 *.py filter=cleanpython
 *.java filter=secret diff=secret
 
-*.mp3 diff=mp3
