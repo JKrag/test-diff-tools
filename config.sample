@@ -1,0 +1,34 @@
+# Copy the settings you want to 
+# your local .git/config file
+# or your global git config
+
+[diff "exif"]
+	textconv=exiftool
+	cachetextconv = true
+[diff "wrap"]
+	textconv=fmt
+[diff "jpg"]
+	textconv=jp2a --width=80
+	cachetextconv = true
+[diff "pandoc2md"]
+	textconv=pandoc --to=markdown
+[diff "pdfconv"]
+	textconv=pdftohtml -stdout
+[diff "secret"]
+	textconv=perl -pe 'tr/N-ZA-Mn-za-m/A-Za-z/'
+[diff "color"]
+	textconv=pygmentize -O style=native
+[diff "mp3"]
+	textconv=mp3info -x
+[diff "zipshow"]
+	textconv=unzip -c -a
+[diff "ziplist"]
+	textconv=unzip  -l
+
+[filter "cleanpython"]
+	clean = yapf 
+	smudge = cat
+
+[filter "secret"]
+	clean = ruby -ne 'print $_.tr( \"A-Za-z\", \"N-ZA-Mn-za-m\") ' 
+	smudge =  perl -pe 'tr/N-ZA-Mn-za-m/A-Za-z/'
